@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+
+<h1 class=" m-5 form-group">Please Fill Notes Details</h1>
+<form method="POST">
+  {% csrf_token %}
+    <div class=" m-5 form-group" action={% url 'show' %}>
+      <label for="title">TItle</label>
+      <input Required name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter here!">
+    </div>
+    <div class=" m-5 form-group">
+      <label for="content">Note content</label>
+      <textarea Required name="content" id="content" placeholder="Enter your note content here" class="form-control" style="height: 200px;"></textarea>
+    </div>
+    
+    <div class="container text-center">
+      <button type="submit" class=" l-5 btn btn-primary">Save</button>
+    </div>
+  </form>
+
+
+
+
+

@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+
+
+<h1 class=" m-5 form-group">Update Your Notes </h1>
+<form method="POST" action="/update/{{id}}">
+  {% csrf_token %}
+    <div class=" m-5 form-group">
+      <label for="title">TItle</label>
+      <input Required name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp" value="{{title}}"></input>
+    </div>
+    <div class=" m-5 form-group">
+      <label for="content">Note content</label>
+      <textarea Required name="content" id="content" placeholder="Enter your note content here" class="form-control" style="height: 200px;">{{content}}</textarea>
+    </div>
+    
+    <div class="container text-center">
+      <button type="submit" class=" l-5 btn btn-primary">Update</button>
+    </div>
+  </form>
+
+
+
